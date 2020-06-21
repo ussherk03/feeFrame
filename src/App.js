@@ -35,9 +35,21 @@ class App extends Component {
     
     console.log(newfees);
     
-    if (newfees.length <= 9) {
+    if (newfees.length >= 4 && newfees.length <= 9) {
 
       newfees.push( { id: this.state.fees.length + 1, amount: 0 } );
+
+      feesList.classList.add('height-scroll');
+
+      feesList.style.height = '400px';
+
+    } else if (newfees.length <= 3) {
+
+      newfees.push( { id: this.state.fees.length + 1, amount: 0 } );
+
+      feesList.classList.remove('height-scroll');
+
+      feesList.classList.add('height-auto');
 
     }
   
@@ -51,14 +63,28 @@ class App extends Component {
 
     const feesList = document.querySelector('.fees-list');
 
-    if (stateFees.length !== 1) {
+    
+
+    if (stateFees.length !== 1 && stateFees.length <= 4) {
       
       let fees = stateFees.filter(c => c.id !== feesID);
+      
       console.log(fees);
-  
+
+      feesList.classList.remove('height-auto');
+      
+      feesList.style.height = 'auto';  
       
       this.setState({ fees: fees });
 
+    } else if (stateFees.length !== 1 && stateFees.length >= 5) {
+
+       let fees = stateFees.filter(c => c.id !== feesID);
+
+        console.log(fees);
+  
+      
+      this.setState({ fees: fees });
     }
       
   } 

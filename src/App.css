@@ -1,7 +1,7 @@
 body {
     width: 100%;
     background: rgb(202, 198, 198);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -12,7 +12,7 @@ body {
 .fees-frame {
     padding: 2em 6em;
     background: white;
-    height: 750px;
+    height: 900px;
 }
 
 .frame-banner .hero-text {
@@ -55,24 +55,30 @@ body {
     border-radius: 9px;
     padding: 1px 4px;
     margin: 2px;
-    height: 97px;
-    overflow-y: auto;
+    /* height: 400px; */
+    overflow-y: auto; 
 }
 
-.height-scroll {
+.height-auto {
+    height: auto;
+}
+
+.height-scroll{
     overflow-y: scroll;
 }
 
-
 .hide {
     overflow-y: hidden;
+}
+
+.fee-box {
+    margin-bottom: 2px;
 }
 
 .fee-frame {
     padding: 1em;
     background: rgb(201, 198, 198);
     border-radius: 9px;
-    margin-bottom: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
@@ -80,6 +86,7 @@ body {
 
     position: relative;
 }
+
 
 .active {
     background-color: goldenrod;

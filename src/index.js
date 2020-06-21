@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './styles.css';
 import App from './App';
 
-// let feesList = document.querySelector('.fees-list');
 
 
 

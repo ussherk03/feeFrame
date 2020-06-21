@@ -10,7 +10,7 @@ class Fee extends Component {
     const { delFee, fee } = this.props;
 
     return (
-      <>
+      <div className="fee-box">
         <div className="fee-frame" >
           {/* <span className="tag">{fee.id}</span> */}
           <div className="fee-type">
@@ -52,7 +52,7 @@ class Fee extends Component {
             <i className="fa fa-times"></i>
           </a>
         </div>
-      </>
+      </div>
     );
   }
 }
